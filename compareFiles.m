@@ -33,13 +33,12 @@ function compareFiles()
 
     fileTraits = cell(numFiles, 1);
 
-    % extracts code from files for comparison beginning 
+    % extracts from files
     for i = 1:numFiles
         filePath = fullfile(dirPath, studentFiles{i});
         fileTraits{i} = extractCodeFeatures(filePath);
     end
 
-    % ..
     for i = 1:numFiles
         for j = i+1:numFiles
 
